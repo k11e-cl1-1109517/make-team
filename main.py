@@ -23,7 +23,7 @@ async def on_ready():
 @bot.command()
 async def team(ctx, specified_num=2):
     make_team = MakeTeam()
-    remainder_flag = 'true'
+    remainder_flag = True
     msg = make_team.make_party_num(ctx,specified_num,remainder_flag)
     await ctx.channel.send(msg)
 
